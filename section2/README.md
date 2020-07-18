@@ -22,6 +22,13 @@
 Product choice (e.g., Cloud SQL, BigQuery, Cloud Spanner, Cloud Bigtable)
 Choosing storage options (e.g., Standard, Nearline, Coldline, Archive)
 
+[Platform Overview - Data & Storage](https://www.youtube.com/watch?v=tc2940Zwvyk)
+
+[Storage comparision](https://cloud.google.com/products/storage)
+
+[Database comparison](https://cloud.google.com/products/databases)
+
+
 
 #### 2.4 Planning and configuring network resources. Tasks include:
 ---
