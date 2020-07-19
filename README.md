@@ -8,3 +8,9 @@ Exam Outline
 3. Deploying and implementing a cloud solution
 4. Ensuring successful operation of a cloud solution
 5. Configuring access and security
+
+
+ENV variable
+--
+USER=example@gmail.com
+GROUP=example@googlegroups.com
