@@ -28,6 +28,7 @@ $ gcloud services enable stackdriver.googleapis.com
 
 Provisioning one or more Stackdriver workspaces
 
+https://cloud.google.com/monitoring/workspaces/create
 
 
 #### 1.2 Managing billing configuration
@@ -40,7 +41,11 @@ $ gcloud beta billing projects link $PROJECT_ID --billing-account="$ACCOUNT_ID"
 
 Establishing billing budgets and alerts
 
+[Set budgets and budget alerts](https://cloud.google.com/billing/docs/how-to/budgets)
+
 Setting up billing exports to estimate daily/monthly charges
+
+[Export Cloud Billing data to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
 
 #### 1.3 Installing and configuring the command line interface (CLI), specifically the Cloud SDK.
 Setting the default project
