@@ -12,5 +12,10 @@ Exam Outline
 
 ENV variable
 --
-USER=example@gmail.com
-GROUP=example@googlegroups.com
+```
+GUSER="example@gmail.com"
+GGROUP=example@googlegroups.com
+PROJECT_ID=ace-project-${RANDOM}
+// gcloud beta billing accounts list
+ACCOUNT_ID=XXXXXX-XXXXXX-XXXXXX
+```
