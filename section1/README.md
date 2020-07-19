@@ -1,10 +1,3 @@
-```
-$ GUSER="example@gmail.com"
-$ PROJECT_ID=ace-project-${RANDOM}
-// gcloud beta billing accounts list
-$ ACCOUNT_ID=
-```
-
 #### 1.1 Setting up cloud projects and accounts
 Creating projects
 
