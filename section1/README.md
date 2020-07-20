@@ -48,6 +48,6 @@ $ gcloud config configurations create ace-project-conf
 $ gcloud config set project $PROJECT_ID
 
 $ gcloud compute zones list --filter="name~asia"
-$ gcloud config set compute/zone asia-southeast1-a
-$ gcloud config set compute/region asia-southeast1
+$ gcloud config set compute/zone $ZONE
+$ gcloud config set compute/region $REGION
 ```
