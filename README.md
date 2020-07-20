@@ -18,4 +18,6 @@ GGROUP=example@googlegroups.com
 PROJECT_ID=ace-project-${RANDOM}
 // gcloud beta billing accounts list
 ACCOUNT_ID=XXXXXX-XXXXXX-XXXXXX
+REGION=asia-southeast1
+ZONE=asia-southeast1-a
 ```
