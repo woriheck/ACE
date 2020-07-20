@@ -52,10 +52,8 @@ $ gcloud compute instance-groups managed create f1-micro-auto-scaling-group --te
 $ gcloud compute instance-groups managed set-autoscaling f1-micro-auto-scaling-group --max-num-replicas=3 --target-cpu-utilization=0.7
 ```
 
+Configuring a VM for Stackdriver monitoring and logging
 
+Assessing compute quotas and requesting increases
 
-3.3 Deploying and implementing App Engine, Cloud Run, and Cloud Functions resources. Tasks include, where applicable:
-Deploying an application, updating scaling configuration, versions, and traffic splitting
-
-Deploying an application that receives Google Cloud events 
-(e.g., Cloud Pub/Sub events, Cloud Storage object change notification events)
+Installing the Stackdriver Agent for monitoring and logging
