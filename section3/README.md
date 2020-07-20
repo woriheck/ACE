@@ -2,6 +2,19 @@
 Launching a compute instance using Cloud Console and Cloud SDK (gcloud)
 (e.g., assign disks, availability policy, SSH keys)
 
+Create disk and assign disk
+```
+$ gcloud compute disk-types list --filter="name~standard"
+$ gcloud compute disks create myvm-disk-10gb --size=10GB --type="pd-standard"
+$ gcloud compute disks list
+$ gcloud compute instances create myvm --machine-type=f1-micro --disk="name=myvm-disk-10gb"
+```
+
+Create disk on the spot of vm creation
+```
+$ gcloud compute instances create myvm2 --machine-type=f1-micro --create-disk="name=myvm2-disk-10gb,size=10GB,type=pd-standard"
+$ gcloud compute disks list
+```
 
 Assign ssh keys
 ```
