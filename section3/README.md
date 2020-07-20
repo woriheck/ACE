@@ -16,6 +16,24 @@ $ gcloud compute instances create myvm2 --machine-type=f1-micro --create-disk="n
 $ gcloud compute disks list
 ```
 
+Availability policy
+
+```
+--preemptible
+A preemptible VM costs much less, but lasts only 24 hours. It can be terminated sooner due to system demands
+
+--no-restart-on-failure
+Compute engine will not restart, if they are terminated for non-user-initiated reasons 
+(maintenance event, hardware failure, software failure and so on)
+
+--maintenance-policy=migrate|terminate
+When Compute Engine performs periodic infrastructure maintenance
+migrate: It can migrate your VM instances to other hardware without downtime
+terminate: Terminate the vm
+
+$ gcloud compute instances create myvm1 --machine-type=f1-micro --preemptible --no-restart-on-failure --maintenance-policy=terminate
+```
+
 Assign ssh keys
 ```
 $ gcloud compute instances create myvm --machine-type=f1-micro
