@@ -56,6 +56,33 @@ $ ssh woriheck@{my_vm_ip}
 
 3.1.4 Configuring a VM for Stackdriver monitoring and logging
 
+Create startup scripts "startup.sh"
+```
+#!/bin/bash
+
+sudo apt-get -y  update
+sudo apt-get -y  install apache2 php7.0
+
+
+curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh
+sudo bash add-monitoring-agent-repo.sh
+sudo apt-get -y update
+sudo apt-get -y install stackdriver-agent
+sudo service stackdriver-agent start
+
+curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh
+sudo bash add-logging-agent-repo.sh
+sudo apt-get -y update
+sudo apt-get -y install google-fluentd
+sudo apt-get -y install google-fluentd-catch-all-config-structured
+```
+
+Run vm with startup script
+```
+$ gcloud compute instances create myvm --machine-type=f1-micro --metadata-from-file="startup-script=startup.sh" --tags="http-server,https-server"
+```
+
+
 3.1.5 Assessing compute quotas and requesting increases
 
 Check project quota
@@ -64,7 +91,8 @@ Check project quota
 $ gcloud compute project-info describe --project $PROJECT
 ```
 
-Request for Update quote 
+Request for quote updgrade
 https://cloud.google.com/compute/quotas
 
 3.1.6 Installing the Stackdriver Agent for monitoring and logging
+
