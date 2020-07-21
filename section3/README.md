@@ -93,7 +93,7 @@ Check project quota
 $ gcloud compute project-info describe --project $PROJECT
 ```
 
-Request for quote updgrade
+Request for quote upgrade
 
 https://cloud.google.com/compute/quotas
 
