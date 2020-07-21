@@ -1,5 +1,6 @@
 #### 3.1 Deploying and implementing Compute Engine resources. Tasks include:
-Launching a compute instance using Cloud Console and Cloud SDK (gcloud)
+
+3.1.1 Launching a compute instance using Cloud Console and Cloud SDK (gcloud)
 (e.g., assign disks, availability policy, SSH keys)
 
 Create disk and assign disk
@@ -34,7 +35,17 @@ terminate: Terminate the vm
 $ gcloud compute instances create myvm1 --machine-type=f1-micro --preemptible --no-restart-on-failure --maintenance-policy=terminate
 ```
 
-Assign ssh keys
+https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys#instance-only
+https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys#instance-only
+
+3.1.2 Creating an autoscaled managed instance group using an instance template
+```
+$ gcloud compute instance-templates create f1-micro-template --machine-type=f1-micro
+$ gcloud compute instance-groups managed create f1-micro-auto-scaling-group --template=f1-micro-template --size=1
+$ gcloud compute instance-groups managed set-autoscaling f1-micro-auto-scaling-group --max-num-replicas=3 --target-cpu-utilization=0.7
+```
+
+3.1.3 Generating/uploading a custom SSH key for instances
 ```
 $ gcloud compute instances create myvm --machine-type=f1-micro
 $ ssh-keygen -t rsa -C woriheck
@@ -42,24 +53,18 @@ $ echo woriheck:$(cat /home/erikchow1993/.ssh/id_rsa.pub) > ssh-list
 $ gcloud compute instances add-metadata myvm --metadata-from-file ssh-keys=ssh-list
 $ ssh woriheck@{my_vm_ip}
 ```
-https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys#instance-only
-https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys#instance-only
 
-Creating an autoscaled managed instance group using an instance template
+3.1.4 Configuring a VM for Stackdriver monitoring and logging
+
+3.1.5 Assessing compute quotas and requesting increases
+
+Check project quota
+
 ```
-$ gcloud compute instance-templates create f1-micro-template --machine-type=f1-micro
-$ gcloud compute instance-groups managed create f1-micro-auto-scaling-group --template=f1-micro-template --size=1
-$ gcloud compute instance-groups managed set-autoscaling f1-micro-auto-scaling-group --max-num-replicas=3 --target-cpu-utilization=0.7
+$ gcloud compute project-info describe --project $PROJECT
 ```
 
-Configuring a VM for Stackdriver monitoring and logging
-
-Assessing compute quotas and requesting increases
-
-Check quota
-
-`$gcloud compute project-info describe --project $PROJECT`
-
+Request for Update quote 
 https://cloud.google.com/compute/quotas
 
-Installing the Stackdriver Agent for monitoring and logging
+3.1.6 Installing the Stackdriver Agent for monitoring and logging
