@@ -56,4 +56,6 @@ Configuring a VM for Stackdriver monitoring and logging
 
 Assessing compute quotas and requesting increases
 
+https://cloud.google.com/compute/quotas
+
 Installing the Stackdriver Agent for monitoring and logging
