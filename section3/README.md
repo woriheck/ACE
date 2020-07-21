@@ -55,7 +55,7 @@ $ ssh woriheck@{my_vm_ip}
 ```
 
 3.1.4 Configuring a VM for Stackdriver monitoring and logging
-
+3.1.6 Installing the Stackdriver Agent for monitoring and logging
 Create startup scripts "startup.sh"
 ```
 #!/bin/bash
@@ -83,6 +83,8 @@ $ gcloud compute instances create myvm --machine-type=f1-micro --metadata-from-f
 ```
 
 
+Resouces link: https://cloud.google.com/monitoring/quickstart-lamp
+
 3.1.5 Assessing compute quotas and requesting increases
 
 Check project quota
@@ -94,5 +96,10 @@ $ gcloud compute project-info describe --project $PROJECT
 Request for quote updgrade
 https://cloud.google.com/compute/quotas
 
-3.1.6 Installing the Stackdriver Agent for monitoring and logging
 
+#### 3.2 Deploying and implementing Google Kubernetes Engine resources. Tasks include:
+3.2.1 Deploying a Google Kubernetes Engine cluster
+
+3.2.2 Deploying a container application to Google Kubernetes Engine using pods
+
+3.2.3 Configuring Google Kubernetes Engine application monitoring and logging
