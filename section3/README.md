@@ -103,4 +103,35 @@ https://cloud.google.com/compute/quotas
 
 3.2.2 Deploying a container application to Google Kubernetes Engine using pods
 
+https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
+
+```
+gcloud container clusters create hello-cluster
+gcloud compute instances list
+
+# Create a Kubernetes Deployment for your hello-app Docker image.
+$ kubectl create deployment hello-app --image=gcr.io/${PROJECT_ID}/hello-app:v1
+
+# Set the baseline number of Deployment replicas to 3.
+$ kubectl scale deployment hello-app --replicas=3
+
+# Create a HorizontalPodAutoscaler resource for your Deployment.
+$ kubectl autoscale deployment hello-app --cpu-percent=80 --min=1 --max=5
+
+$ kubectl get pods
+
+# Expose the sample app to the internet
+$ kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer --port 80 --target-port 8080
+$ kubectl get service
+
+
+# Apply a rolling update to the existing deployment with an image update:
+$ kubectl get deployments
+$ kubectl set image deployment/hello-app hello-app=gcr.io/${PROJECT_ID}/hello-app:v2
+
+# Verify pod status
+$ kubectl get pods
+```
+
 3.2.3 Configuring Google Kubernetes Engine application monitoring and logging
+
