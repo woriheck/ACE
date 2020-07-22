@@ -107,6 +107,8 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 
+https://medium.com/swlh/kubernetes-in-a-nutshell-tutorial-for-beginners-caa442dfd6c0
+
 ```
 # Create a kubernetes cluster
 gcloud container clusters create hello-cluster
