@@ -103,6 +103,8 @@ https://cloud.google.com/compute/quotas
 
 3.2.2 Deploying a container application to Google Kubernetes Engine using pods
 
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
 https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 
 ```
