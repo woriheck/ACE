@@ -122,15 +122,18 @@ $ kubectl autoscale deployment hello-app --cpu-percent=80 --min=1 --max=5
 
 # Expose the sample app to the internet
 $ kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer --port 80 --target-port 8080
-$ kubectl get service
 
 
 # Apply a rolling update to the existing deployment with an image update:
 $ kubectl get deployments
 $ kubectl set image deployment/hello-app hello-app=gcr.io/${PROJECT_ID}/hello-app:v2
+```
 
-# Verify pod status
+```
+# Verify status
 $ kubectl get pods
+$ kubectl get service
+$ kubectl get deployment
 ```
 
 3.2.3 Configuring Google Kubernetes Engine application monitoring and logging
