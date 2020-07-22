@@ -106,7 +106,9 @@ https://cloud.google.com/compute/quotas
 https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 
 ```
+# Create a kubernetes cluster
 gcloud container clusters create hello-cluster
+# Verify the instances created
 gcloud compute instances list
 
 # Create a Kubernetes Deployment for your hello-app Docker image.
@@ -117,8 +119,6 @@ $ kubectl scale deployment hello-app --replicas=3
 
 # Create a HorizontalPodAutoscaler resource for your Deployment.
 $ kubectl autoscale deployment hello-app --cpu-percent=80 --min=1 --max=5
-
-$ kubectl get pods
 
 # Expose the sample app to the internet
 $ kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer --port 80 --target-port 8080
