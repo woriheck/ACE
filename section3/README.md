@@ -142,3 +142,6 @@ $ kubectl get deployment
 
 3.2.3 Configuring Google Kubernetes Engine application monitoring and logging
 
+```
+$ gcloud container clusters create my-cluster --zone=$ZONE --enable-stackdriver-kubernetes
+```
