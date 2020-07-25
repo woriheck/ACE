@@ -145,3 +145,30 @@ $ kubectl get deployment
 ```
 $ gcloud container clusters create my-cluster --zone=$ZONE --enable-stackdriver-kubernetes
 ```
+
+#### 3.3 Deploying and implementing App Engine, Cloud Run, and Cloud Functions resources. Tasks include, where applicable:
+
+Deploying an application, updating scaling configuration, versions, and traffic splitting
+
+Deploying an application that receives Google Cloud events 
+(e.g., Cloud Pub/Sub events, Cloud Storage object change notification events)
+
+
+Cloud Run
+```
+Enable:
+cloudbuild.googleapis.com
+run.googleapis.com
+
+$ gcloud config set run/platform managed
+$ gcloud config set run/region asia-southeast1
+$ gcloud builds submit --tag gcr.io/${PROJECT_ID}/hello-app:v1
+$ gcloud run deploy --image=gcr.io/${PROJECT_ID}/hello-app:v1
+$ gcloud builds submit --tag gcr.io/${PROJECT_ID}/hello-app:v2
+$ gcloud run deploy --image=gcr.io/${PROJECT_ID}/hello-app:v2
+$ gcloud run services list --platform managed
+$ gcloud run revisions list --platform managed
+$ gcloud run services update-traffic hello-app --to-revisions hello-app-00001-soz=25,hello-app-00002-wiz=75
+$ gcloud run services describe hello-app
+$ gcloud run services delete hello-app
+```
