@@ -155,6 +155,10 @@ Deploying an application that receives Google Cloud events
 
 
 Cloud Run
+
+Deploy: https://cloud.google.com/run/docs/quickstarts/build-and-deploy
+
+Migrate traffic: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration
 ```
 Enable:
 cloudbuild.googleapis.com
