@@ -154,7 +154,7 @@ Deploying an application that receives Google Cloud events
 (e.g., Cloud Pub/Sub events, Cloud Storage object change notification events)
 
 
-Cloud Run
+**Cloud Run**
 
 Deploy: https://cloud.google.com/run/docs/quickstarts/build-and-deploy
 
