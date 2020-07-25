@@ -170,8 +170,8 @@ $ gcloud builds submit --tag gcr.io/${PROJECT_ID}/hello-app:v1
 $ gcloud run deploy --image=gcr.io/${PROJECT_ID}/hello-app:v1
 $ gcloud builds submit --tag gcr.io/${PROJECT_ID}/hello-app:v2
 $ gcloud run deploy --image=gcr.io/${PROJECT_ID}/hello-app:v2
-$ gcloud run services list --platform managed
-$ gcloud run revisions list --platform managed
+$ gcloud run services list
+$ gcloud run revisions list
 $ gcloud run services update-traffic hello-app --to-revisions hello-app-00001-soz=25,hello-app-00002-wiz=75
 $ gcloud run services describe hello-app
 $ gcloud run services delete hello-app
