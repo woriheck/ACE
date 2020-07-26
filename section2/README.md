@@ -16,6 +16,7 @@
 
 [Serverless compute comparision](https://cloud.google.com/serverless-options)
 
+https://stackoverflow.com/questions/43212836/multiple-environments-staging-qa-production-etc-with-kubernetes
 
 
 #### 2.3 Planning and configuring data storage options. Considerations include:
