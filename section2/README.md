@@ -14,6 +14,7 @@
 
 [Compute production comparision](https://cloud.google.com/products/compute/)
 
+[Serverless compute comparision](https://cloud.google.com/serverless-options)
 
 
 
@@ -27,6 +28,7 @@ Choosing storage options (e.g., Standard, Nearline, Coldline, Archive)
 [Storage comparision](https://cloud.google.com/products/storage)
 
 [Database comparison](https://cloud.google.com/products/databases)
+
 
 
 
