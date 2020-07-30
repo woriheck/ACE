@@ -182,6 +182,21 @@ $ gcloud run services delete hello-app
 Deploy https://cloud.google.com/appengine/docs/flexible/go/quickstart
 
 ```
-$ gcloud app deploy --appyaml=app.yaml --no-promote
-$
+$ go get -u -d -v github.com/GoogleCloudPlatform/golang-samples
+$ cd gopath/src/github.com/GoogleCloudPlatform/golang-samples/appengine_flexible/helloworld
+$ gcloud app deploy --version=v1
+$ gcloud app instances list
+$ gcloud app browse
+
+# Change content & deploy version 2
+# Method 1
+$ gcloud app deploy --version=v2
+$ gcloud app versions start v1
+$ gcloud app versions list
+
+# Method 2
+$ gcloud app deploy --version=v2 --no-stop-previous-version
+
+$ gcloud app services set-traffic default --splits="v1=0.3,v2=0.7" --split-by="random"
+$ gcloud app browse
 ```
