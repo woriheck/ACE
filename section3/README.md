@@ -176,3 +176,12 @@ $ gcloud run services update-traffic hello-app --to-revisions hello-app-00001-so
 $ gcloud run services describe hello-app
 $ gcloud run services delete hello-app
 ```
+
+** App engine
+
+Deploy https://cloud.google.com/appengine/docs/flexible/go/quickstart
+
+```
+$ gcloud app deploy --appyaml=app.yaml --no-promote
+$
+```
