@@ -206,7 +206,4 @@ gcloud app instances ssh aef-default-v1-0jgc --service=default --version=v1
 gcloud app versions stop v1
 gcloud app versions stop v2
 
-gcloud app instances delete aef-default-v1-0jgc --service=default --version=v1
-gcloud app instances delete aef-default-v2-xzxl --service=default --version=v2
-gcloud app instances list
 ```
