@@ -199,4 +199,14 @@ $ gcloud app deploy --version=v2 --no-stop-previous-version
 
 $ gcloud app services set-traffic default --splits="v1=0.3,v2=0.7" --split-by="random"
 $ gcloud app browse
+
+#SSH 
+gcloud app instances list
+gcloud app instances ssh aef-default-v1-0jgc --service=default --version=v1
+gcloud app versions stop v1
+gcloud app versions stop v2
+
+gcloud app instances delete aef-default-v1-0jgc --service=default --version=v1
+gcloud app instances delete aef-default-v2-xzxl --service=default --version=v2
+gcloud app instances list
 ```
