@@ -177,7 +177,7 @@ $ gcloud run services describe hello-app
 $ gcloud run services delete hello-app
 ```
 
-** App engine
+**App engine**
 
 Deploy https://cloud.google.com/appengine/docs/flexible/go/quickstart
 
