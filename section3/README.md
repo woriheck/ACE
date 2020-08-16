@@ -140,6 +140,11 @@ $ kubectl get service
 $ kubectl get deployment
 ```
 
+Check Service ip Netw forwarding rules in instances
+```
+$ iptables-save
+```
+
 3.2.3 Configuring Google Kubernetes Engine application monitoring and logging
 
 ```
