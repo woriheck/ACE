@@ -151,6 +151,10 @@ $ iptables-save
 $ gcloud container clusters create my-cluster --zone=$ZONE --enable-stackdriver-kubernetes
 ```
 
+Deployment vs statefulsets vs daemonsets
+
+https://medium.com/stakater/k8s-deployments-vs-statefulsets-vs-daemonsets-60582f0c62d4
+
 #### 3.3 Deploying and implementing App Engine, Cloud Run, and Cloud Functions resources. Tasks include, where applicable:
 
 Deploying an application, updating scaling configuration, versions, and traffic splitting
