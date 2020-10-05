@@ -456,6 +456,8 @@ https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizat
 
 https://cloud.google.com/solutions/best-practices-for-operating-containers
 
+https://cloud.google.com/solutions/best-practices-for-building-containers
+
 https://wiki.owasp.org/index.php/Security_by_Design_Principles
 
 https://cloud.google.com/iam/docs/understanding-roles
